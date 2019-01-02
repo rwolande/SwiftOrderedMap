@@ -36,7 +36,7 @@ public struct OrderedMap<key: Hashable, value>
                 }
         }
         
-        public func key_at_index(_ index: Int) -> key?
+        public func key(for index: Int) -> key?
         {
                 if index >= self.count
                 {
@@ -48,7 +48,7 @@ public struct OrderedMap<key: Hashable, value>
                 }
         }
         
-        public func index_for_key(_ key: key) -> Int?
+        public func index(for key: key) -> Int?
         {
                 for (index,k) in self.keys.enumerated()
                 {
@@ -60,7 +60,7 @@ public struct OrderedMap<key: Hashable, value>
                 return nil
         }
         
-        public func tuple_at_index(_ index: Int) -> (key: key, value: value)?
+        public func tuple(at index: Int) -> (key: key, value: value)?
         {
                 if index >= self.count
                 {
@@ -74,7 +74,7 @@ public struct OrderedMap<key: Hashable, value>
                 return nil
         }
         
-        public func value_at_index(_ index: Int) -> value?
+        public func value(at index: Int) -> value?
         {
                 if index >= self.count
                 {
